@@ -1,9 +1,23 @@
 [tool.poetry]
 name = "send-email-react"
 version = "0.1.0"
-description = ""
-authors = ["RWallan <3am.richardwallan@gmail.com>"]
+description = "Projeto full stack em Python utilizando ReactPy para a construção do frontend e FastAPI para a construção do backend. A aplicação envia para o e-mail cadastrado o Zen do Python."
+license = "MIT"
+authors = ["Richard Wallan <3am.richardwallan@gmail.com>"]
 readme = "README.md"
+classifiers = [
+    "Natural Language :: Portuguese (Brazilian)",
+    "Programming Language :: Python :: 3.11",
+    "Environment :: Web Environment",
+    "Framework :: FastAPI",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.urls]
+"Documentação" = "https://github.com/RWallan/send-email-reactpy/blob/main/README.md"
+"Código Fonte" = "https://github.com/RWallan/send-email-reactpy"
+"Bug Tracker" = "https://github.com/RWallan/send-email-reactpy/issues"
+
 
 [tool.poetry.dependencies]
 python = "3.11.*"
