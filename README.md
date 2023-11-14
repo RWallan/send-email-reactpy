@@ -63,7 +63,7 @@ cd backend/
 poetry run task backend
 ```
 
-**Obs:** Para executar o backend, é necessário que possua um arquivo `.env` com as seguintes informações:
+**Obs:** Para executar o backend, é necessário que possua um arquivo `.env` dentro do diretório backend/ com as seguintes informações:
 
     MAIL_TOKEN: str # Token do gmail para possibilitar o envio por API.
     MAIL_FROM: str # Email pertencente ao token que irá enviar as mensagens.
