@@ -4,6 +4,10 @@ Este projeto demonstra como utilizar o Python para construir uma aplicação ful
 
 O ReactPy é responsável por criar o frontend, simulando a mesma estrutura do React, utilizando uma sintaxe puramente 'pytônica'. O FastAPI é uma biblioteca moderna e de alta performance responsável pelo backend da aplicação.
 
+![Index](public/index.png)
+
+![Demonstração](public/demonstracao.gif)
+
 # Requisitos
 
 Python 3.11.
