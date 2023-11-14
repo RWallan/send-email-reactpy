@@ -76,6 +76,10 @@ WIP.
 
 [ ] Documentação das APIs
 
+[ ] Construir testes para o frontend
+
+[ ] Construir testes para o backend
+
 # Licença
 
 Este projeto está sob a licença MIT.
