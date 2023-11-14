@@ -80,6 +80,10 @@ WIP.
 
 [ ] Construir testes para o backend
 
+# Colaboração
+
+Pull requests e Issues são bem vindos para este projeto!
+
 # Licença
 
 Este projeto está sob a licença MIT.
