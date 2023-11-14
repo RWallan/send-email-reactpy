@@ -1,6 +1,6 @@
 # Enviar e-mail usando ReactPy & FastAPI
 
-Este projeto demonstra como utilizar o Python para construir uma aplicação full-stack utilizando ReactPy e FastAPI.
+Este projeto demonstra como utilizar o Python para construir uma aplicação full-stack utilizando ReactPy e FastAPI que envia o Zen do Python por e-mail utilizando uma conta Gmail.
 
 O ReactPy é responsável por criar o frontend, simulando a mesma estrutura do React, utilizando uma sintaxe puramente 'pytônica'. O FastAPI é uma biblioteca moderna e de alta performance responsável pelo backend da aplicação.
 
