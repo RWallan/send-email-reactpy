@@ -1,22 +1,30 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from reactpy import component, html
+from reactpy import component, create_context, hooks, html
 from reactpy.backend.fastapi import Options, configure
 from src.pages import FormPage, ProductDetails
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="src/static"), name="static")
+AppContext = create_context({})
 
 
 @component
 def App():
+    firstNameShared, setFirstNameShared = hooks.use_state("")
     app = html.div(
         {"class_name": "container"},
-        FormPage(),
-        ProductDetails(),
+        FormPage(AppContext),
+        ProductDetails(AppContext),
     )
 
-    return app
+    return AppContext(
+        app,
+        value={
+            "firstNameShared": firstNameShared,
+            "setFirstNameShared": setFirstNameShared
+        }
+    )
 
 
 configure(

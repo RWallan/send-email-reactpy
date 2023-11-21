@@ -7,7 +7,7 @@ from src.models.person_data import PersonData
 
 
 @component
-def FormPage():
+def FormPage(context: hooks.Context[hooks._Type]):
     email, setEmail = hooks.use_state("")
     firstName, setFirstName = hooks.use_state("")
     secondName, setSecondName = hooks.use_state("")
@@ -16,6 +16,11 @@ def FormPage():
     loading, setLoading = hooks.use_state(False)
 
     submitMessage, setSubmitMessage = hooks.use_state("")
+    context = hooks.use_context(context)
+
+    def FirstNameChangeHandler(event):
+        setFirstName(event["target"]["value"])
+        context["setFirstNameShared"](event["target"]["value"])
 
     @event(prevent_default=True)
     async def submit(event):
@@ -41,9 +46,7 @@ def FormPage():
                 PrimaryInputProps(
                     name="First Name",
                     value=firstName,
-                    onChange=lambda event: setFirstName(
-                        event["target"]["value"]
-                    ),
+                    onChange=FirstNameChangeHandler,
                     label="Nome*",
                     placeholder="John",
                 )
